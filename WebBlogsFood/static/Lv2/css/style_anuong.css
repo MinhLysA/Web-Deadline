@@ -66,4 +66,16 @@ body {
     align-items: center;
     font-weight: bold;
   }
+
+  
+  .content-card img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng khung */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    object-fit: cover; /* Tùy chỉnh hình ảnh phù hợp với khung chứa */
+  }
+
+  .content-card p {
+    text-align: justify; /* Căn đều hai bên */
+    padding: 10px;       /* Thêm khoảng cách bên trong để tạo sự thoáng */
+  }
   
