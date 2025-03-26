@@ -1,0 +1,72 @@
+/* Đặt lại các kiểu mặc định của trình duyệt */
+body {
+  font-family: sans-serif; /* Chọn font chữ mặc định */
+  margin: 0; /* Loại bỏ margin mặc định */
+  padding: 0; /* Loại bỏ padding mặc định */
+}
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Định dạng phần nội dung chính */
+.content-main {
+  padding: 40px;
+}
+
+/* Định dạng phần label và các card */
+.content-label-section {
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+/* Định dạng label */
+.content-label-section .content-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Định dạng container chứa các card */
+.content-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+/* Định dạng từng card */
+.content-card {
+  width: 23%; /* Chiều rộng card (có thể thay đổi) */
+  border: 1px solid #cb5211;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+/* Định dạng nút "Xem thêm" trong card */
+.content-card button {
+  padding: 8px 15px;
+  background-color: #f0870e;
+  border: 1px solid #ef9d05;
+}
+
+/* Định dạng container chứa các circle */
+.content-circles {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Định dạng từng circle */
+.content-circle {
+  width: 150px; /* Đường kính circle (có thể thay đổi) */
+  height: 150px;
+  border-radius: 50%; /* Tạo hình tròn */
+  border: 1px solid #ebaf0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}

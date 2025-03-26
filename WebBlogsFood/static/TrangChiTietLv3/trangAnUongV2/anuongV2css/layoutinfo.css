@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  gap: 21px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.info-booking-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1235px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+  align-items: flex-start;
+  position: relative;
+  top: -25px;
+}
+.restaurant-info {
+  flex: 2;
+  background: #fff;
+  padding: 45px;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height: fit-content;
+  position: relative;
+  top: -46px;
+}
+
+.booking-section button {
+  width: 100%;
+  background: #d32f2f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.booking-section button:hover {
+  background: #b71c1c;
+}
+.booking-section label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.booking-section input,
+.booking-section select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.booking-section .row {
+  display: flex;
+  flex-direction: column;
+}
+.booking-section input[type="date"] {
+  margin-bottom: 15px;
+}
+.menu-nav-container {
+  flex: 2;
+  background: #fff;
+  padding: 45px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  position: relative;
+  top: -50px;
+}

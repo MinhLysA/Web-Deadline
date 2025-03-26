@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="dangkycss/style.css" />
+    <link rel="stylesheet" href="dangkycss/register.css" />
+    <link rel="stylesheet" href="dangkycss/captcha.css" />
+    <script src="dangkyjs/kt.js" defer></script>
+    <script src="dangkyjs/captcha.js"></script>
+  </head>
+  <div class="wrapper">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="logo"><a href="../../TrangChuLv1/b.html">LOGO</a></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="../../TrangChuDeLv2/TrangBoSuuTap/bosuutap.html"
+                >Bộ sưu tập</a
+              >
+            </li>
+            <li class="dropdown">
+              <a href="../../TrangChuDeLv2/TrangAnUong/anuong.html">Ăn uống ▼</a>
+              <ul class="dropdown-menu">
+                <li><a href="../../TrangChuDeLv2/TrangAnUong/anuong.html">Phở</a></li>
+                <li><a href="../../TrangChuDeLv2/TrangAnUong/anuong.html">Bún chả</a></li>
+                <li><a href="../../TrangChuDeLv2/TrangAnUong/anuong.html">Cơm tấm</a></li>
+                <li><a href="../../TrangChuDeLv2/TrangAnUong/anuong.html">Lẩu Thái</a></li>
+              </ul>
+            </li>
+            <li><a href="../../TrangChuDeLv2/TrangVideo1/trangVideo1.html">Video</a></li>
+            <li>
+              <a href="../../TrangChuDeLv2/TrangViTri/vitri.html">Gần bạn</a>
+            </li>
+            <li>
+              <a href="../../TrangChuDeLv2/TrangCongThuc/Conthuc.html"
+                >Công thức nấu ăn</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="account">
+          <span>&#128100;</span>
+          <a href="../../TrangChiTietLv3/trangDangKy/trangdangky.html">Đăng Ký</a>
+          <a href="../../TrangChiTietLv3/trangDangNhap/trangdangnhap.html">Đăng Nhập</a>
+        </div>
+      </div>
+    </header>
+        <div class="search-container">
+          <select>
+            <option>Chọn địa điểm</option>
+            <option>Hà Nội</option>
+            <option>TP.HCM</option>
+            <option>Đà Nẵng</option>
+          </select>
+          <input type="text" placeholder="Nhà hàng bạn mong muốn..." />
+          <button>Tìm kiếm</button>
+        </div>
+      <!-- Form Đăng Ký -->
+      <div class="container">
+        <form class="register-container">
+          <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+          <input type="text" placeholder="Họ và tên" required />
+          <input type="tel" placeholder="Số điện thoại" required />
+          <input type="password" placeholder="Mật khẩu" required />
+          <input type="password" placeholder="Xác nhận mật khẩu" required />
+          <input type="email" placeholder="Email" required />
+          <div class="terms-container">
+            <label
+              ><input type="checkbox" required /> Tôi đồng ý với điều khoản sử
+              dụng</label
+            >
+          </div>
+          <div class="captcha-container">
+            <input type="checkbox" id="captcha-checkbox" />
+            <label for="captcha-checkbox">
+              <img
+                src="dangkyanh/recapt.png"
+                alt="reCAPTCHA logo"
+                class="captcha-img"
+              />
+              Tôi không phải là người máy
+            </label>
+          </div>
+          <p id="captcha-error" class="error-message"></p>
+          <button type="submit">Đăng ký</button>
+          <p>
+            Đã có tài khoản?
+            <a href="trangdangnhap.html">Đăng nhập thành viên</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="container footer-content">
+          <div class="footer-section">
+            <div class="logo">LOGO</div>
+          </div>
+          <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Tiện ích</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Chính sách</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Chứng nhận</h4>
+            <div class="certification-circle"></div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </div>
+</html>
