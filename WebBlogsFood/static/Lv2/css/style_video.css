@@ -134,4 +134,8 @@
   .video-offer p {
     color: #666;
   }
+.logo a {
+    text-decoration: none;
+    color: inherit;
+  }
   
