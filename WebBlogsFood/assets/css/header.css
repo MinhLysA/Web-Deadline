@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* === CONTAINER === */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+header.scrolled {
+    background: #f40303;
+    padding: 5px;
+}
+header.scrolled a{
+    color: #fcfcfc;
+}
+/* === HEADER === */
+header {
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+/* === DROPDOWN MENU === */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.dropdown-menu li a {
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.search-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    border-bottom: #333;
+    margin-bottom: 40px;
+}
+
+.search-container select,
+.search-container input,
+.search-container button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container input {
+    flex-grow: 1;
+}
+
+.search-container button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #e65c00;
+}
+.popular-section {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    grid-column: span 2;
+}
+
+.popular-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 3px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+}

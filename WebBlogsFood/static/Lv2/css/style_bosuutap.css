@@ -1,0 +1,131 @@
+/* Đặt lại các kiểu mặc định của trình duyệt */
+.bs-body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Định dạng container chứa toàn bộ nội dung */
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Định dạng phần nội dung chính */
+  .bs-content {
+    padding: 30px 20px;
+  }
+  
+  /* Định dạng label section */
+  .bs-label-section {
+    margin-bottom: 40px;
+  }
+  
+  .bs-label-section .bs-label-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Định dạng slider */
+  .bs-slider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .bs-slider-prev,
+  .bs-slider-next {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .bs-slider-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Định dạng form */
+  .bs-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bs-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .bs-form button {
+    background-color: #e44d26;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Định dạng card section */
+  .bs-card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .bs-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 220px;
+  }
+  
+  .bs-card-image {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .bs-card-content p {
+    color: #666;
+  }
+  
+  /* Định dạng slider navigation */
+  .bs-slider-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .bs-slider-nav-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .bs-slider-nav-btn.active {
+    background-color: #e44d26;
+  }
+  
