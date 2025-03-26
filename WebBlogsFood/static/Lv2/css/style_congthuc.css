@@ -271,5 +271,10 @@ body {
     text-align: justify; /* Căn đều hai bên */
     padding: 10px;       /* Thêm khoảng cách bên trong để tạo sự thoáng */
   }
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+  }
   
   
