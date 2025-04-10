@@ -1,0 +1,277 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* SLIDE */
+.content-slider {
+  position: relative;
+  width: 80%;
+  max-width: 1600px;
+  max-height: 400px; /* Tăng chiều cao để nổi bật hơn */
+  margin: 20px auto; /* Thêm khoảng cách trên dưới */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  min-width: 100%;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 400px; /* Điều chỉnh chiều cao slide */
+  object-fit: cover; /* Đảm bảo ảnh vừa khung */
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.slider-prev {
+  left: 15px;
+}
+
+.slider-next {
+  right: 15px;
+}
+
+/* POPULAR SECTION */
+.popular-posts {
+  width: 80%;
+  max-width: 1600px;
+  margin: 20px auto;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.popular-posts h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 3px solid red;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.popular-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.popular-item {
+  min-width: calc(25% - 20px); /* 4 item mỗi lần hiển thị */
+  margin: 10px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popular-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.popular-item p {
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.popular-btn-prev,
+.popular-btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.popular-btn-prev {
+  left: 10px;
+}
+
+.popular-btn-next {
+  right: 10px;
+}
+
+/* NỘI DUNG CHÍNH */
+.content-main {
+  width: 80%;
+  max-width: 1600px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 75% cho content, 25% cho sidebar */
+  gap: 30px;
+}
+
+.content-primary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột bài viết */
+  gap: 20px;
+}
+
+.article-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card-content {
+  padding: 15px;
+}
+
+.article-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.article-date {
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* SIDEBAR */
+.content-sidebar {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-sidebar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.tags-section {
+  background-color: #d60000;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-item {
+  background-color: #e0e0e0;
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.tag-item:hover {
+  background-color: #bbb;
+}
+
+.content-sidebar img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .content-main {
+    grid-template-columns: 2fr 1fr; /* Điều chỉnh tỷ lệ trên màn hình nhỏ hơn */
+  }
+
+  .popular-item {
+    min-width: calc(33.33% - 20px); /* 3 item mỗi lần hiển thị */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-main {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+  }
+
+  .content-primary {
+    grid-template-columns: 1fr; /* 1 cột bài viết */
+  }
+
+  .popular-item {
+    min-width: calc(50% - 20px); /* 2 item mỗi lần hiển thị */
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-item {
+    min-width: 100%; /* 1 item mỗi lần hiển thị */
+  }
+
+  .content-slider,
+  .popular-posts,
+  .content-main {
+    width: 90%; /* Giảm chiều rộng để vừa màn hình nhỏ */
+  }
+}

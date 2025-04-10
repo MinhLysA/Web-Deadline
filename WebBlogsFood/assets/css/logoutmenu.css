@@ -1,0 +1,35 @@
+.account {
+  position: relative;
+  display: inline-block;
+}
+
+.account .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  border-radius: 5px;
+}
+
+.account:hover .dropdown-menu {
+  display: block;
+}
+
+.account .dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.account .dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.account span {
+  margin-right: 5px;
+}

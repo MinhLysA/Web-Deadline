@@ -1,0 +1,116 @@
+/* Định dạng container chính */
+.vt-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Panel */
+.vt-left-panel {
+  flex: 1; /* Chiếm 1/4 chiều rộng */
+  display: flex;
+  flex-direction: column;
+}
+
+.vt-image-box {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vt-image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vt-image-box img {
+  width: 100%;
+  height: 150px; /* Giảm chiều cao hình ảnh */
+  object-fit: cover;
+}
+
+.vt-image-box p {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* Map Container */
+.vt-map-container {
+  flex: 3; /* Chiếm 3/4 chiều rộng */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vt-map-container iframe {
+  width: 100%;
+  height: 500px; /* Tăng chiều cao bản đồ */
+  border: none;
+}
+
+.vt-info-box {
+  padding: 20px;
+}
+
+.vt-info-box h3 {
+  font-size: 18px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.vt-info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vt-info-box ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Page Header */
+.vt-page-header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.vt-page-header h1 {
+  font-size: 32px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.vt-page-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vt-container {
+    flex-direction: column;
+  }
+
+  .vt-map-container iframe {
+    height: 300px; /* Giảm chiều cao bản đồ trên màn hình nhỏ */
+  }
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}

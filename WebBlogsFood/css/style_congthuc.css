@@ -1,0 +1,338 @@
+/* Đặt lại các kiểu mặc định của trình duyệt */
+body {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Định dạng container chứa toàn bộ nội dung */
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Định dạng phần nội dung chính */
+  .main-content {
+    display: flex;
+    padding: 30px 0;
+    gap: 30px;
+  }
+  
+  /* Định dạng phần nội dung bên trái */
+  .left-section {
+    width: 70%;
+  }
+  
+  /* Định dạng bài viết */
+  .blog-post {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Hiệu ứng hover cho bài viết */
+  .blog-post:hover {
+    transform: translateY(-10px); /* Nâng bài viết lên khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ */
+  }
+  
+  .blog-image {
+    flex: 0 0 40%;
+    overflow: hidden;
+  }
+  
+  .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .blog-post:hover .blog-image img {
+    transform: scale(1.05);
+  }
+  
+  .blog-details {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-meta {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Định dạng tiêu đề bài viết */
+  .blog-title {
+    font-size: 26px; /* Tăng kích thước chữ */
+    margin-bottom: 15px;
+    color: #e74c3c; /* Màu nổi bật */
+    font-weight: bold;
+    line-height: 1.4;
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+  }
+  
+  .blog-title:hover {
+    color: #c0392b; /* Đổi màu khi hover */
+  }
+  
+  .blog-summary {
+    font-size: 16px; /* Tăng kích thước chữ */
+    color: #555; /* Màu chữ nhẹ hơn */
+    line-height: 1.8; /* Tăng khoảng cách dòng */
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  /* Định dạng nút "Đọc thêm" */
+  .read-more-btn {
+    background-color: #e74c3c; /* Màu nền đỏ nổi bật */
+    color: white; /* Màu chữ */
+    padding: 12px 25px; /* Tăng kích thước nút */
+    border-radius: 5px; /* Làm tròn góc */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: white; /* Đổi màu nền khi hover */
+    color: #e74c3c; /* Đổi màu chữ khi hover */
+    border: 1px solid #e74c3c; /* Thêm viền khi hover */
+  }
+  
+  /* Định dạng phần nội dung bên phải */
+  .right-section {
+    width: 30%;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    color: #444; /* Màu chữ trung tính, dễ đọc */
+  }
+
+  /* Tăng khoảng cách giữa các phần tử trong cột bên phải */
+  .right-section > * {
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các phần tử */
+  }
+
+  /* Loại bỏ khoảng cách cuối cùng */
+  .right-section > *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Định dạng tiêu đề trong cột bên phải */
+  .right-section h3 {
+    color: #e74c3c; /* Màu nổi bật cho tiêu đề */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Định dạng liên kết trong cột bên phải */
+  .right-section a {
+    color: #555; /* Màu chữ nhẹ hơn cho liên kết */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .right-section a:hover {
+    color: #e74c3c; /* Đổi màu chữ khi hover */
+  }
+  
+  /* Định dạng công thức nấu ăn */
+  .recipe-box {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Hiệu ứng hover cho công thức */
+  .recipe-box:hover {
+    transform: translateY(-10px); /* Nâng công thức lên khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ */
+  }
+  
+  .recipe-meta {
+    font-size: 13px;
+    color: #777;
+    padding: 15px 20px 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Định dạng tiêu đề công thức */
+  .recipe-title {
+    font-size: 22px; /* Tăng kích thước chữ */
+    color: #e74c3c; /* Màu nổi bật */
+    font-weight: bold;
+    margin: 15px 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .recipe-title:hover {
+    color: #c0392b; /* Đổi màu khi hover */
+  }
+  
+  /* Định dạng thời gian */
+  .recipe-time {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .recipe-time:before {
+    content: "⏱";
+    font-size: 12px;
+  }
+  
+  .recipe-img {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định */
+    overflow: hidden;
+  }
+  
+  .recipe-img img {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover; /* Cắt hình ảnh để vừa khung */
+    transition: transform 0.5s ease;
+  }
+  
+  .recipe-box:hover .recipe-img img {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  }
+  
+  /* Định dạng danh mục */
+  .category-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .category-box:hover {
+    transform: translateY(-5px); /* Nâng danh mục lên khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Tăng bóng đổ */
+  }
+  
+  .category-box h3 {
+    font-size: 20px;
+    color: #e74c3c; /* Màu nổi bật */
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .category-box h3:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #e74c3c;
+  }
+  
+  .category-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .category-box li {
+    margin-bottom: 8px;
+  }
+  
+  .category-box li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .category-box li a {
+    color: #555; /* Màu chữ nhẹ hơn */
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+  }
+  
+  .category-box li a:hover {
+    color: #e74c3c; /* Đổi màu chữ khi hover */
+    padding-left: 10px; /* Thêm khoảng cách khi hover */
+    border-bottom-color: #e74c3c; /* Đổi màu viền khi hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .main-content {
+      flex-direction: column; /* Chuyển sang bố cục cột */
+    }
+  
+    .left-section,
+    .right-section {
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+  
+    .right-section {
+      margin-top: 20px; /* Tạo khoảng cách trên */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-post {
+      flex-direction: column; /* Chuyển bài viết sang dạng cột */
+    }
+  
+    .blog-image {
+      height: 200px; /* Giảm chiều cao hình ảnh */
+    }
+  }
+  .content-card img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng khung */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    object-fit: cover; /* Tùy chỉnh hình ảnh phù hợp với khung chứa */
+  }
+
+  .content-card p {
+    text-align: justify; /* Căn đều hai bên */
+    padding: 10px;       /* Thêm khoảng cách bên trong để tạo sự thoáng */
+  }
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
