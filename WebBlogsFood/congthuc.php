@@ -30,7 +30,7 @@ include 'includes/header.php'; // Header
             </div>
             <h3 class='blog-title'>{$baiviet['tieude']}</h3>
             <p class='blog-summary'>" . substr($baiviet['noidung'], 0, 100) . "...</p>
-            <a href='baiviet.php?id={$baiviet['id']}' class='read-more-btn'>Đọc thêm »</a>
+            <a href='CongThucV2.php?id={$baiviet['id']}' class='read-more-btn'>Đọc thêm »</a>
           </div>
         </div>
         ";

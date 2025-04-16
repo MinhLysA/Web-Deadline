@@ -18,6 +18,7 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
     <link rel="stylesheet" href="assets/css/forgot.css" />
     <link rel="stylesheet" href="assets/css/register.css" />
     <link rel="stylesheet" href="assets/css/logoutmenu.css" />
+    <link rel="stylesheet" href="assets/css/CongThucV2.css" />
     <link rel="stylesheet" href="static/Lv2/css/style_anuong.css" />
     <link rel="stylesheet" href="static/Lv2/css/style_bosuutap.css" />
     <link rel="stylesheet" href="static/Lv2/css/style_congthuc.css" />

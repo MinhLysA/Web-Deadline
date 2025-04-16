@@ -65,7 +65,7 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
             <div class="popular-item">
                 <img src="<?php echo $article['anh_minh_hoa']; ?>" alt="Popular" />
                 <p>
-                    <a href="baiviet.php?id=<?php echo $article['id']; ?>">
+                    <a href="CongThucV2.php?id=<?php echo $article['id']; ?>">
                         <?php echo htmlspecialchars($article['tieude']); ?>
                     </a>
                 </p>
