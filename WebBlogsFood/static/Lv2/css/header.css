@@ -9,7 +9,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
 }
-
 /* === CONTAINER === */
 .container {
   width: 90%;
@@ -114,6 +113,11 @@ img {
   height: 100%;
   object-fit: contain; /* Đảm bảo ảnh không bị méo và luôn vừa khung */
 }
+img .logo-img {
+  width: 80px;
+  height: auto;
+  display: block;
+}
 
 /* === FOOTER === */
 /* Đảm bảo trang web có chiều cao đầy đủ */
@@ -133,45 +137,6 @@ body {
 /* Nội dung chính sẽ đẩy footer xuống */
 
 /* Footer có bố cục linh hoạt */
-footer {
-  background: #333;
-  color: white;
-  padding: 30px 0;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.footer-section {
-  width: 200px;
-  text-align: left;
-}
-
-.footer-section h4 {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.footer-section p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* Chứng nhận (vòng tròn) */
-.certification-circle {
-  width: 80px;
-  height: 80px;
-  border: 2px solid white;
-  border-radius: 50%;
-  margin: 10px auto;
-}
-
 /* === RESPONSIVE CHO MOBILE === */
 @media (max-width: 768px) {
   .container {

@@ -1,10 +1,15 @@
 <footer class="footer">
-    <div class="container">
+      <div class="footer-col logo-col">
+          <img src="images/Logo (2).png" alt="gopast" class="logo">
+          
+        </div>    
+<div class="container">
       <div class="footer-top">
-        <div class="footer-col logo-col">
-          <img src="" alt="gopast" class="logo">
+        <div class="footer-col">
           <h4>Đặt chỗ & Ưu đãi</h4>
-          <p>gopast là nền tảng đặt chỗ trực tuyến, giúp thực khách tìm kiếm và lựa chọn nhà hàng đúng ý gần nhất...</p>
+          <ul>
+            <li><a href="#">gopast là nền tảng đặt chỗ trực tuyến, giúp thực khách tìm kiếm và lựa chọn nhà hàng đúng ý gần nhất... </a></li>
+          </ul>
         </div>
         <div class="footer-col">
           <h4>Giới thiệu</h4>

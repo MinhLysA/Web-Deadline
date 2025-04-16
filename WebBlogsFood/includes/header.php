@@ -9,7 +9,6 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $title ?? 'Trang Web'; ?></title>
-    <link rel="stylesheet" href="WebBlogsFood/assets/css/footer.css" />
     <link rel="stylesheet" href="static/Lv2/css/header.css" />
     <link rel="stylesheet" href="static/Lv2/css/footer.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -33,7 +32,9 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
   <body>
       <header>
         <div class="container">
-          <div class="logo"><a href="index.php">LOGO</a></div>
+        <div class="footer-col logo-col">
+          <img src="images/Logo (2).png" alt="gopast" class="logo">
+        </div>
           <nav>
             <ul>
               <li><a href="bosuutap.php">Bộ sưu tập</a></li>
