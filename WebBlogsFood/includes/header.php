@@ -32,9 +32,11 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
   <body>
       <header>
         <div class="container">
-        <div class="footer-col logo-col">
-          <img src="images/Logo (2).png" alt="gopast" class="logo">
-        </div>
+        <div class="logo">
+  <a href="index.php">
+    <img src="images/Logo (2).png" alt="Logo" class="logo-img">
+  </a>
+</div>
           <nav>
             <ul>
               <li><a href="bosuutap.php">Bộ sưu tập</a></li>

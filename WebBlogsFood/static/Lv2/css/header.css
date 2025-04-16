@@ -113,11 +113,17 @@ img {
   height: 100%;
   object-fit: contain; /* Đảm bảo ảnh không bị méo và luôn vừa khung */
 }
-img .logo-img {
-  width: 80px;
-  height: auto;
+.logo {
+  text-align: left;
+  padding: 10px 0;
+}
+
+.logo-img {
+  width: 80px;      /* 👈 chỉnh logo nhỏ */
+  height: auto;     /* giữ tỉ lệ ảnh */
   display: block;
 }
+
 
 /* === FOOTER === */
 /* Đảm bảo trang web có chiều cao đầy đủ */

@@ -1,9 +1,12 @@
 <footer class="footer">
-      <div class="footer-col logo-col">
-          <img src="images/Logo (2).png" alt="gopast" class="logo">
-          
-        </div>    
-<div class="container">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="index.php">
+            <img src="images/Logo (2).png" alt="Logo" class="logo-img">
+          </a>
+        </div>
+      </div>
+    <div class="container">
       <div class="footer-top">
         <div class="footer-col">
           <h4>Đặt chỗ & Ưu đãi</h4>
