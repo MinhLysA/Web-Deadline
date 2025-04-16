@@ -116,10 +116,22 @@ $offers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <?php if ($video): ?>
         <div class="video-player-section">
-            <video controls>
-                <source src="<?php echo htmlspecialchars($video['video_url']); ?>" type="video/mp4">
-                Trình duyệt của bạn không hỗ trợ video.
-            </video>
+        <?php
+            $video_url = htmlspecialchars($video['video_url']);
+            if (strpos($video_url, 'youtube.com') !== false || strpos($video_url, 'youtu.be') !== false):
+                // Lấy ID video từ URL
+                preg_match('/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^\&\?\/]+)/', $video_url, $matches);
+                $youtube_id = $matches[1] ?? '';
+            ?>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/<?php echo $youtube_id; ?>" 
+                    frameborder="0" allowfullscreen style="border-radius: 12px; margin: 20px 0;"></iframe>
+            <?php else: ?>
+                <video controls>
+                    <source src="<?php echo $video_url; ?>" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+    </video>
+<?php endif; ?>
+
             <p><?php echo nl2br(htmlspecialchars($video['description'])); ?></p>
         </div>
     <?php else: ?>
