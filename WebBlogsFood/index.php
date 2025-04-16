@@ -60,7 +60,6 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
 <div class="popular-posts">
     <h2>Xem nhiều nhất tháng</h2>
     <div class="popular-slider">
-        <button class="popular-btn-prev" onclick="slideMove(-1)">❮</button>
         <div class="popular-track">
             <?php foreach ($popular_articles as $article): ?>
             <div class="popular-item">
@@ -74,6 +73,7 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
             <?php endforeach; ?>
         </div>
         <button class="popular-btn-next" onclick="slideMove(1)">❯</button>
+        <button class="popular-btn-prev" onclick="slideMove(-1)">❮</button>
     </div>
 </div>
 
@@ -92,9 +92,26 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
             </div>
         </div>
         <?php endforeach; ?>
-    </div>
+        <div class="content-primary1">
+            <div class="section-header1">
+                <h2>Địa Điểm Ăn Uống</h2>
+                <a href="#">Xem thêm ➝</a>
+            </div>
+                <?php foreach ($articles as $article): ?>
+                <div class="article-card1">
+                    <img src="<?php echo $article['anh_minh_hoa']; ?>" alt="<?php echo htmlspecialchars($article['tieude']); ?>" />
+                    <div class="article-card-content1">
+                        <h3><?php echo htmlspecialchars($article['tieude']); ?></h3>
+                        <p class="article-date1">
+                            📅 <?php echo date("d/m/Y", strtotime($article['ngay_dang'])); ?>
+                        </p>
+                        <p><?php echo htmlspecialchars(substr($article['noidung'], 0, 100)) . '...'; ?></p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+        </div>
 
-    <!-- SIDEBAR -->
+    </div>
     <div class="content-sidebar">
         <input type="text" placeholder="Blogs: công thức nấu ăn, sức khỏe, ..." />
         <div class="tags-section">Từ khóa:</div>
@@ -105,10 +122,12 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
             </div>
             <?php endforeach; ?>
         </div>
-        <img src="../WebBlogsFood/assets/images/home_2.jpg" alt="Sidebar Image" />
+        <?php foreach ($articles as $article): ?>
+            <img src="<?php echo $article['anh_minh_hoa']; ?>" alt="<?php echo htmlspecialchars($article['tieude']); ?>" />
+        <?php endforeach; ?>
     </div>
+    
 </div>
-
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

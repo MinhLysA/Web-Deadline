@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fff; /* Màu nền trắng */
 }
 
 /* SLIDE */
@@ -95,18 +95,23 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .popular-item img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
+  object-fit: fill;
 }
-
 .popular-item p {
   font-size: 14px;
-  padding: 10px;
   text-align: center;
+  text-decoration: none;
+}
+.popular-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
 .popular-btn-prev,
@@ -139,12 +144,21 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr; /* 75% cho content, 25% cho sidebar */
   gap: 30px;
+  align-items: flex-start;
 }
 
 .content-primary {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 cột bài viết */
   gap: 20px;
+  background-color: #fff; /* Màu nền trắng */
+  padding: 50px;
+}
+.content-primary1 {
+  grid-column: span 2; 
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột bài viết */
+  background-color: #fff; /* Màu nền trắng */
 }
 
 .article-card {
@@ -161,7 +175,7 @@ body {
 
 .article-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -189,20 +203,34 @@ body {
 
 /* SIDEBAR */
 .content-sidebar {
-  background: #f4f4f4;
+  background: white;
   padding: 20px;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-self: stretch; /* đảm bảo kéo dài theo nội dung */
 }
-
 .content-sidebar input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 14px;
+}
+.content-sidebar {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: stretch; /* đảm bảo kéo dài theo nội dung */
+}
+.content-sidebar img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Thêm khoảng cách giữa các ảnh */
 }
 
 .tags-section {
@@ -237,6 +265,95 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+/* Thẻ chứa toàn bộ 1 bài viết */
+.article-card1 {
+  display: flex; /* Sắp xếp hình ảnh và nội dung nằm ngang */
+  background-color: #fff; /* Màu nền trắng */
+  overflow: hidden; /* Ẩn phần dư ra ngoài bo góc */
+  margin-bottom: 10px; /* Khoảng cách giữa các bài viết */
+  transition: transform 0.3s ease; /* Hiệu ứng hover mượt mà */
+}
+
+/* Khi di chuột vào 1 bài viết */
+.article-card1:hover {
+  transform: translateY(-4px); /* Đẩy bài viết lên nhẹ để tạo hiệu ứng nổi */
+}
+
+/* Ảnh minh họa của bài viết */
+.article-card1 img {
+  width: 160px; /* Chiều rộng cố định cho ảnh */
+  height: 120px; /* Chiều cao cố định cho ảnh */
+  object-fit: cover; /* Ảnh lấp đầy không bị méo */
+  border-radius: 8px; /* Bo nhẹ các góc ảnh */
+  margin: 12px; /* Khoảng cách ảnh với nội dung */
+  flex-shrink: 0; /* Không co lại nếu nội dung dài */
+}
+
+/* Phần nội dung bài viết */
+.article-card-content1 {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Ngày đăng bài */
+.article-date1 {
+  font-size: 0.9rem; /* Cỡ chữ nhỏ */
+  color: #777; /* Màu xám nhạt */
+  margin-bottom: 6px; /* Khoảng cách với tiêu đề */
+}
+
+/* Tiêu đề bài viết */
+.article-card-content1 h3 {
+  font-size: 1.1rem; /* Cỡ chữ vừa */
+  font-weight: bold; /* Đậm chữ */
+  color: #d10000; /* Màu đỏ nổi bật */
+  margin: 0 0 8px; /* Cách ngày và mô tả */
+}
+
+/* Nội dung mô tả ngắn */
+.article-card-content1 p {
+  font-size: 0.95rem; /* Cỡ chữ bình thường */
+  color: #333; /* Màu đen đậm nhẹ */
+  margin: 0; /* Xóa khoảng trắng mặc định */
+  line-height: 1.4; /* Giãn dòng vừa phải */
+}
+/* Phần khung chứa tiêu đề lớn "Địa Điểm Ăn Uống" và link "Xem thêm" */
+.section-header1 {
+  grid-column: span 2; 
+  display: flex;                      /* Dùng flexbox để sắp xếp các phần tử ngang hàng */
+  justify-content: space-between;    /* Đẩy 2 phần tử sang 2 bên (trái/phải) */
+  align-items: center;               /* Căn giữa theo chiều dọc */
+  width: 100%;                       /* Chiếm toàn bộ chiều ngang */
+  max-width: 850px;                  /* Giới hạn chiều rộng để không quá dài */
+  margin: 0 auto;               /* Căn giữa khối + tạo khoảng cách bên dưới */
+  padding: 0 20px;                   /* Padding ngang để không sát viền */
+  box-sizing: border-box;
+}
+
+/* Phần chữ "Địa Điểm Ăn Uống" */
+.section-header1  h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 3px solid red;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Link "Xem thêm" bên phải */
+.section-header1 a {
+  font-size: 0.95rem;        /* Cỡ chữ nhỏ hơn tiêu đề */
+  color: #d10000;            /* Màu đỏ nổi bật, cùng tone với tiêu đề bài viết */
+  text-decoration: none;     /* Xoá gạch chân mặc định của thẻ <a> */
+  font-weight: 500;          /* Tăng độ đậm nhẹ cho chữ */
+  transition: all 0.2s ease; /* Hiệu ứng chuyển động mượt mà khi hover */
+}
+
+/* Hiệu ứng khi di chuột vào link */
+.section-header1 a:hover {
+  text-decoration: underline; /* Hiện gạch chân khi hover để người dùng nhận biết là link */
 }
 
 /* RESPONSIVE */
