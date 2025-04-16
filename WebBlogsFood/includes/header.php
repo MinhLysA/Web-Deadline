@@ -69,13 +69,15 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
                 </div>
             </div>
       </header>
-      <div class="search-container">
-        <select>
-          <option>Chọn địa điểm</option>
-          <option>Hà Nội</option>
-          <option>TP.HCM</option>
-          <option>Đà Nẵng</option>
-        </select>
-        <input type="text" placeholder="Nhà hàng bạn mong muốn..." />
-        <button>Tìm kiếm</button>
+      <div class="recipe-search-bar">
+        <form action="search.php" method="GET">
+          <select name="location">
+            <option>Chọn địa điểm</option>
+            <option>Hà Nội</option>
+            <option>TP.HCM</option>
+            <option>Đà Nẵng</option>
+          </select>
+          <input type="text" name="query" placeholder="Nhà hàng bạn mong muốn..." />
+          <button>Tìm kiếm</button>
+        </form>
       </div>

@@ -66,3 +66,16 @@ function slideMove(direction) {
 }
 
 document.addEventListener("DOMContentLoaded", setupPopularSlider);
+document.addEventListener("DOMContentLoaded", function () {
+  const searchForm = document.querySelector(".recipe-search-bar form");
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (e) {
+      const queryInput = this.querySelector('input[name="query"]');
+      if (queryInput.value.trim() === "") {
+        e.preventDefault();
+        alert("Vui lòng nhập từ khóa tìm kiếm!");
+        queryInput.focus();
+      }
+    });
+  }
+});

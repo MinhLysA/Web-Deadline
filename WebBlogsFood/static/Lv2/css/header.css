@@ -119,11 +119,10 @@ img {
 }
 
 .logo-img {
-  width: 80px;      /* 👈 chỉnh logo nhỏ */
-  height: auto;     /* giữ tỉ lệ ảnh */
+  width: 80px; /* 👈 chỉnh logo nhỏ */
+  height: auto; /* giữ tỉ lệ ảnh */
   display: block;
 }
-
 
 /* === FOOTER === */
 /* Đảm bảo trang web có chiều cao đầy đủ */
@@ -182,43 +181,68 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .recipe-search-bar {
+    width: 100% !important; /* Đảm bảo kéo dài trên màn hình nhỏ */
+    max-width: none !important; /* Loại bỏ giới hạn max-width */
+    padding: 10px;
+  }
+
+  .recipe-search-bar form {
+    flex-direction: column; /* Xếp dọc trên màn hình nhỏ */
+    gap: 8px;
+  }
+
+  .recipe-search-bar select,
+  .recipe-search-bar input,
+  .recipe-search-bar button {
+    width: 100% !important; /* Chiếm toàn bộ chiều rộng */
+  }
 }
-.search-container {
+.recipe-search-bar {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1200px; /* Tăng chiều rộng tối đa để kéo dài thanh tìm kiếm */
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
   padding: 10px;
   background: #f1f1f1;
   border-radius: 5px;
-  border-bottom: #333;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
-.search-container select,
-.search-container input,
-.search-container button {
+.recipe-search-bar form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.recipe-search-bar select,
+.recipe-search-bar input,
+.recipe-search-bar button {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.search-container input {
-  flex-grow: 1;
+.recipe-search-bar select {
+  width: 150px; /* Chiều rộng cố định cho select */
 }
 
-.search-container button {
+.recipe-search-bar input {
+  flex-grow: 1; /* Input chiếm toàn bộ chiều rộng còn lại */
+  min-width: 0; /* Đảm bảo input co giãn đúng */
+}
+
+.recipe-search-bar button {
+  width: 100px; /* Chiều rộng cố định cho nút */
   background: #ff6600;
   color: white;
   border: none;
   cursor: pointer;
 }
 
-.search-container button:hover {
+.recipe-search-bar button:hover {
   background: #e65c00;
 }
 .popular-section {
