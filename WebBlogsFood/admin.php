@@ -114,7 +114,7 @@ $recent_reviews = $conn->query("SELECT d.*, n.ten as username, b.tieude as post_
                 <span class="num"><?= $reviews_count > 0 ? $reviews_count : '' ?></span>
             </a>
             <a href="#" class="profile">
-                <img src="../assets/images/people.png">
+                <img src="images/admin.jpg">
             </a>
         </nav>
 
