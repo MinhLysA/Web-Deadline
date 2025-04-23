@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 
 // Kết nối database
-require_once '../config/database.php';
+require_once 'config/database.php';
 
 // Kiểm tra ID bài viết
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -113,13 +113,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sửa Bài viết - Blog Ẩm Thực</title>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 <body>
     <!-- SIDEBAR -->
     <section id="sidebar">
-        <!-- Giữ nguyên sidebar từ posts.php -->
-        <!-- ... (Copy từ posts.php) ... -->
+    <a href="admin.php" class="brand">
+            <i class='bx bxs-restaurant'></i>
+            <span class="text">Admin Blog Ẩm Thực</span>
+        </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="admin.php">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="posts.php">
+                    <i class='bx bxs-food-menu'></i>
+                    <span class="text">Quản lý Bài viết</span>
+                </a>
+            </li>
+            <li>
+                <a href="users.php">
+                    <i class='bx bxs-user'></i>
+                    <span class="text">Người dùng</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="logout.php" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Đăng xuất</span>
+                </a>
+            </li>
+        </ul>
     </section>
 
     <!-- CONTENT -->
@@ -136,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="checkbox" id="switch-mode" hidden>
             <label for="switch-mode" class="switch-mode"></label>
             <a href="#" class="profile">
-                <img src="../assets/images/people.png">
+                <img src="images/admin.jpg">
             </a>
         </nav>
 
@@ -234,6 +264,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </main>
     </section>
 
-    <script src="../assets/js/dashboard.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 </body>
 </html>

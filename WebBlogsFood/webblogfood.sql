@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 23, 2025 lúc 04:58 AM
+-- Thời gian đã tạo: Th4 23, 2025 lúc 10:53 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -33,13 +33,6 @@ CREATE TABLE `account_activation` (
   `token` varchar(255) NOT NULL,
   `thoi_gian_het_han` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `account_activation`
---
-
-INSERT INTO `account_activation` (`id`, `nguoidung_id`, `token`, `thoi_gian_het_han`) VALUES
-(11, 105, '8de36f153e5f662ec88a0704d438680c', '2025-04-17 06:08:13');
 
 -- --------------------------------------------------------
 
@@ -597,8 +590,7 @@ INSERT INTO `nguoidung` (`id`, `ten`, `email`, `matkhau`, `avatar`, `vai_tro`, `
 (102, 'khoa', '99.dangkhoa.10@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', 'images/avatar1.jpg', 'user', '2025-04-09', 1),
 (103, 'user1', 'khoa2005dk@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', 'images/avatar2.jpg', 'user', '2025-04-09', 1),
 (104, 'Admin', 'admin@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', NULL, 'admin', '2025-04-09', 1),
-(105, 'Ngôn', 'tuthanhngon.012345@gmail.com', '$2y$10$qX7BVVltzeNYd9knoIIJBuWFpP3RpeI.d.uUGxUqY0kwxSulVUnh2', NULL, 'user', '2025-04-17', 0),
-(106, 'AnhKhoa', 'ackhoa9@gmail.com', '$2y$10$II0cCQWWLKsj962vXeKkwOmoNPXQOZl0TGavnJ750XwxG5D8qQw/u', NULL, 'user', '2025-04-17', 1);
+(106, 'AnhKhoa', 'ackhoa9@gmail.com', '$2y$10$8YSDeNa1C0Ae6HZe.2eEAeijkko1qE.vxzsknEvG8WiGShq8SYVZS', NULL, 'user', '2025-04-17', 1);
 
 -- --------------------------------------------------------
 
@@ -1112,7 +1104,7 @@ ALTER TABLE `account_activation`
 -- AUTO_INCREMENT cho bảng `baiviet`
 --
 ALTER TABLE `baiviet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT cho bảng `baiviet_images`
@@ -1190,7 +1182,7 @@ ALTER TABLE `monan`
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT cho bảng `nguyenlieu`
