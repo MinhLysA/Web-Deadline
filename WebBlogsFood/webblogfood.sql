@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 23, 2025 lúc 10:53 AM
+-- Thời gian đã tạo: Th4 23, 2025 lúc 02:35 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -453,7 +453,18 @@ INSERT INTO `diadiem_anuong` (`id`, `ten`, `dia_chi`, `loai_hinh`, `khoang_gia`,
 (2, 'Bún Chả Hàng Mành', '19 Hàng Mành, Hoàn Kiếm, Hà Nội', 'Quán bún chả', '40.000 - 80.000 VNĐ', 'Bún chả Hàng Mành nổi tiếng với hương vị đậm đà, thịt nướng thơm ngon.', 'images/buncha.jpg', '2025-04-23 01:39:31'),
 (3, 'Cơm Tấm Ba Ghiền', '84 Đặng Văn Ngữ, Quận Phú Nhuận, TP.HCM', 'Quán cơm tấm', '50.000 - 120.000 VNĐ', 'Cơm tấm Ba Ghiền là địa chỉ yêu thích với cơm tấm sườn bì chả.', 'images/comtam.jpg', '2025-04-23 01:39:31'),
 (4, 'Lẩu Thái 123', '56 Nguyễn Huệ, TP. Đà Nẵng', 'Quán lẩu', '150.000 - 300.000 VNĐ', 'Lẩu Thái 123 mang đến trải nghiệm ẩm thực chua cay đặc trưng.', 'images/lauthai.jpg', '2025-04-23 01:39:31'),
-(5, 'Bánh Xèo Mười Xiềm', '190 Nam Kỳ Khởi Nghĩa, Quận 3, TP.HCM', 'Quán bánh xèo', '60.000 - 150.000 VNĐ', 'Bánh xèo giòn rụm với nhân tôm thịt đậm đà, cùng với rau sống tươi ngon.', 'images/banhxeo.jpg', '2025-04-23 01:39:31');
+(5, 'Bánh Xèo Mười Xiềm', '190 Nam Kỳ Khởi Nghĩa, Quận 3, TP.HCM', 'Quán bánh xèo', '60.000 - 150.000 VNĐ', 'Bánh xèo giòn rụm với nhân tôm thịt đậm đà, cùng với rau sống tươi ngon.', 'images/banhxeo.jpg', '2025-04-23 01:39:31'),
+(6, 'Phở Hòa', '260A Pasteur, phường 8, quận 3, TP.HCM', 'Quán phở', 'Khoảng 40.000 – 55.000 đồng', 'Nằm ở con đường Pasteur, Phở Hòa là một trong những quán phở lâu đời có tiếng, qua bao năm vẫn giữ được những mùi vị thơm ngon đặc trưng. Nước dùng của quán được hầm từ 100% xương, nên nó có vị ngọt tự nhiên, thanh mà không gắt. Thêm vào đó, phần thịt ở Phở Hòa khá mềm, thơm, tô phở khá lớn khiến nhiều người yêu thích.', 'images/pho1.jpg', '2025-04-23 11:48:24'),
+(7, 'Pizza Hut', '38A Trần Hưng Đạo, phường Phạm Ngũ Lão, quận 1, TP.HCM', 'Quán pizza', 'Khoảng 100.000 – 220.000 đồng', 'Nhắc đến Pizza không thể nào bỏ qua cái tên Pizza Hut, một thương hiệu đã xuất hiện ở Việt Nam từ rất sớm. Với nguyên tắc đặt sự an toàn thực phẩm lên hàng đầu nên Pizza Hut đảm bảo mọi sản phẩm đều được kiểm soát chặt chẽ ở từng khâu nhằm cho ra những miếng Pizza chất lượng nhất.\r\nKhông chỉ vậy, hương vị của Pizza Hut rất thơm ngon với các loại nhân đa dạng như hải sản, thịt nguội và các loại nhân chay hấp dẫn khác. Toàn bộ nguyên liệu đều theo chuẩn Mỹ với giá trị dinh dưỡng cao. Ngoài ra, vỏ bánh cũng khá đa dạng để giúp người dùng có nhiều sự lựa chọn.', 'images/pizza_hut.jpg', '2025-04-23 11:52:32'),
+(8, 'Poke Saigon', 'Đường Nguyễn Huệ (quận 1), Lý Tự Trọng (quận 1).', 'Nhà Hàng salat', '140.000-200.000 đồng', 'Không gian quán được phủ gam trắng chủ đạo cùng nhiều cây xanh, toát lên vẻ hiện đại, gần gũi thiên nhiên. Không phải những món ăn nhanh ngập ngụa dầu mỡ, thực đơn quán hướng đến sự thanh đạm nhưng vẫn đầy đủ dưỡng chất trong một bữa. Những miếng thịt cá tươi ngon thấm đượm trong vị sốt đặc trưng bởi dầu mè, muối, ớt, hành tây và tảo biển, tạo nên món salad \"giải ngấy\" lý tưởng.\n\nEmmanuel Tieu, chàng trai người Pháp gốc Việt, đã ấp ủ ý tưởng mang hương vị tươi ngon tự nhiên của đảo Hawaii về với TP.HCM, Việt Nam. Anh chia sẻ: “Mục đích là để người Việt có thêm một sự lựa chọn khoẻ mạnh cho thực đơn của họ, nhưng vẫn phải ngon và đủ chất”.', 'images/salad1.webp', '2025-04-23 11:55:29'),
+(22, 'Xôi Xéo Bà 3 Béo', '37 Nguyễn Quý Đức, Khu đô thị An Phú An Khánh, Quận 2, Hồ Chí Minh', 'Quán xôi', '1-100.000 ₫\r\n', 'Vô tình biết đến tiệm khi đi 1 quán cafe trong khu này, không quá đông khách lúc mình tới. Nhân viên dễ thương lắm, còn có trà đá miễn phí nữa. Mình đi 2 người, gọi 1 xôi đặc biệt, được cho thêm 1 phần xôi trắng, và mình mua thêm 1 phần chả nữa. Chỉ có phần xôi đặc biệt mới được gói lá sen nhé. Còn lại là sắp trong đĩa. Xôi mềm, nóng ngon. Gà luộc thì để lạnh, không có hấp lại, mình thì không sao, nhưng bạn nào không thích thì chắc là dặn quán hâm lại sẵn nha. Pate béo bùi, cục chả ăn cũng được. Có món pate chiên, mà lúc về mình mới để ý thấy. Lần sau sẽ kêu thử.', 'images/xoi_xeo1.jpg', '2025-04-23 12:01:37'),
+(23, 'Phở Phú Vương', '339 Lê Văn Sỹ, phường 1, quận Tân Bình, TP.HCM', 'Quán Phở', 'Khoảng 40.000 – 77.000 đồng', 'Phở Phú Vương là một địa chỉ được nhiều người lựa chọn khi thèm phở. Sợi phở ở đây mềm, hơi dai dai, nước dùng ngọt thanh vì hầm từ xương. Nhờ đó, quán được nhiều đánh giá khá cao trên các diễn đàn ăn uống.', 'images/pho.jpg', '2025-04-23 12:04:04'),
+(24, 'Quán Ngon – Bún Chả Hà Nội', '209 Đường Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP.HCM.\r\n', 'Quán bún chả', '30.000 – 60.000 VND/người.', 'Bún chả Hà Nội ở TPHCM –  Quán Ngon chinh phục thực khách nhờ hương vị đậm chất Hà Nội. Bún chả được phục vụ cùng nem rán, thịt nướng và chả, hòa quyện với nước dùng chua ngọt vừa vị. Không gian quán rộng rãi, sạch sẽ, cùng đội ngũ nhân viên phục vụ vô cùng nhiệt tình.', 'images/buncha1.jpg', '2025-04-23 12:05:55'),
+(25, 'Cơm tấm Ba Ghiền - Quán cơm tấm Sài Gòn được Michelin vinh danh', '84 Đặng Văn Ngữ, phường 10, quận Phú Nhuận', 'Quán cơm', '40.000 - 66.000 VNĐ', 'Cơm tấm Ba Ghiền là một địa chỉ thưởng thức cơm tấm Sài Gòn ngon trứ danh với hương vị thơm lừng cùng phần ăn vô cùng chất lượng. Mới đây Cơm tấm Ba Ghiền còn là địa chỉ bán cơm tấm duy nhất tại Thành phố Hồ Chí Minh được Michelin vinh danh trong năm 2023.\r\n\r\nPhần ăn của Cơm tấm Ba Ghiền thường có giá đắt hơn so với mặt chung tại Thành phố Hồ Chí Minh. Tuy nhiên, một phần ăn tại Cơm tấm Ba Ghiền được các tín đồ ẩm thực đánh giá là khá nhiều với chất lượng sườn nướng khá ngon. Một miếng sườn cho một phần ăn tại Cơm tấm Ba Ghiền thường có khẩu phần từ 400 - 500 gram. Được biết, Cơm tấm Ba Ghiền đã bán những phần ăn với miếng sườn to ngay từ lúc quán mới được mở vào năm 1995.\r\n\r\nTuy nhiên, lượng thực khách đến thưởng thức ẩm thực tại Cơm tấm Ba Ghiền khá đông. Trong những giờ cao điểm, bạn có thể sẽ phải chờ lâu mới được thưởng thức món ngon tại quán ăn này nhé!', 'images/comtam1.jpg', '2025-04-23 12:07:28'),
+(26, 'Bánh Canh Cua 14', '221 Đường Trần Bình Trọng, Phường 3, Quận 5, TP.HCM.', 'Quán bánh canh', '30.000 – 70.000 VND/người.', 'Bánh canh cua Sài Gòn 14 được biết đến với sợi bánh canh dai ngon, nước lèo đậm đà, thịt cua tươi, càng cua chắc thịt cùng nhiều loại topping phong phú. Đặc biệt, chả cua tại đây được quán tự chế biến từ thịt cua tươi mỗi ngày, đảm bảo chất lượng và hương vị thơm ngon cho thực khách. Hơn nữa, giá cả tại quán rất phải chăng, giúp bạn yên tâm thưởng thức mà không cần bận tâm nhiều về chi phí. ', 'images/banhcanh1.jpg', '2025-04-23 12:09:04'),
+(27, 'Hủ tiếu Nam Vang Đạt Thành', '232 Nguyễn Thị Thập, phường Bình Thuận, quận 7, TP HCM.', 'Quán hủ tiếu', '25.000 – 39.000 đồng', 'Đạt Thành là một trong những quán ăn đã rất quen thuộc với người dân Sài Thành, đặc biệt là thương hiệu hủ tiếu Nam Vang trứ danh, với tô hủ tiếu chất lượng và khá to, thịt nhiều hơi mỏng đầy đủ tim, gan, trứng cút, tôm, thịt băm rất chất lượng. Cọng hủ tiếu thấm sốt khá dai và nước súp thì đậm đà. Đó cũng là lý do mà quán nhận được nhiều phản ứng tích cực từ thực khách trên các trang review ẩm thực.', 'images/hutieu.jpg', '2025-04-23 12:11:11'),
+(28, 'Mười Xiềm - Quán bánh xèo Quận 1 ngon chuẩn vị', 'Số 204 Nguyễn Trãi - Phạm Ngũ Lão - Quận 1 - TP HCM.', 'Quán bánh xèo', '50.000 - 110.000VNĐ', 'Mười Xiềm là cái tên không còn xa lạ với những ai yêu thích bánh xèo miền Tây. Bánh xèo tại đây có nhiều loại nhân khác nhau như tôm thịt, nấm kim châm, bào ngư,... ăn rất lạ miệng. Ngoài ra,  miếng bánh lớn, được hạn chế dầu mỡ nên không bị ngán khi ăn và rất tốt cho sức khỏe. Quán thu hút rất đông thực khách nhờ nguyên liệu tươi ngon, đảm bảo chất lượng cùng không gian rộng rãi, thoáng mát.', 'images/banhxeo1.jpg', '2025-04-23 12:13:27'),
+(29, 'Quán Tadimoto', '18 Bàn Cờ, phường 3, quận 3, thành phố Hồ Chí Minh.', 'Quán nem', '1 phần nem chua gồm 10 viên có giá khoảng 30.000 đồng.', 'Nếu tình cờ có dịp ghé tới quận 3, thành phố Hồ Chí Minh bạn nhất định phải thưởng thức món nem chua rán Sài Gòn ngon nức tiếng tại đây. Cách rán nem chua rán tại đây giúp cho nem chiên giòn ngon độc đáo, đúng vị Hà Nội tại quán Tadimoto khiến cho nhiều thực khách khen không ngớt lời.\r\n\r\nChỉ cần tới quán, gọi món nem chua rán cùng vài đồ ăn vặt là bạn đã có một bữa xế chiều khó quên. Mỗi chiếc nem chua được làm thành từng viên dễ ăn, vừa miệng, đi kèm là nước sốt tương ớt độc đáo. Ăn cùng dưa chuột thái sẽ khiến thực khách ngon miệng hơn mà không bị ngấy. Tadimoto còn kết hợp nhiều món ăn vặt Sài Thành khác như các loại chè, dừa dầm…\r\n\r\nQuán có phục vụ mua mang về và chỉ chiên nóng khi có khách đặt mua. Đây cũng chính là điểm khiến món nem nóng chiên giòn càng trở nên hấp dẫn hơn.', 'images/nemran1.jpg', '2025-04-23 12:15:59');
 
 -- --------------------------------------------------------
 
@@ -771,7 +782,10 @@ CREATE TABLE `restaurants` (
 --
 
 INSERT INTO `restaurants` (`id`, `name`, `description`, `address`, `image_url`, `created_at`) VALUES
-(1, 'Thế Giới Hải Sản Pasteur', 'Nhà hàng chuyên hải sản tươi sống, đa dạng món ngon.', '123 Pasteur, Quận 3, TP.HCM', 'images/tomhum.jpg', '2025-04-09 17:01:57');
+(1, 'Phở 29', 'Phở 29: Đậm đà hương vị xưa', '123 Pasteur, Quận 3, TP.HCM', 'images/pho1.jpg', '2025-04-09 17:01:57'),
+(98, 'Đổ Bánh Xèo bằng bột pha sẵn hãy làm theo cách này để bánh giòn xốp lâu', NULL, NULL, NULL, '2025-04-23 12:32:08'),
+(99, 'Top 3 Quán Chè Ngon Giá Cực Rẻ Ở Sài Gòn, Quán Quê Miền Tây Bình Dân Khách Ăn Đông Nườm Nượp', '☞ Top 3 Quán Chè Ngon Giá Cực Rẻ Ở Sài Gòn, Quán Quê Miền Tây Bình Dân Khách Ăn Đông Nườm Nượp\n--------------------------✨✨', '\r\nQuán 1: Chè Chợ Bà Chiểu\r\n🌍Địa chỉ: 4 Võ Trường Toản, Phuòng 2, Bình Thạnh\r\n💰Giá Từ: 12K - 15K / ly\r\n🧭Mở bán: 15h - 22h\r\n⛳ Maps : https://maps.app.goo.gl/tHWEfHT8tyNTg...\r\n--------------------------✨✨\r\nQuán 2: Chè Bá Cháy\r\n🌍Địa chỉ: 180/46 Lô D Cư Xá Bì', NULL, '2025-04-23 12:28:00'),
+(100, 'Cách làm gỏi tôm cuốn thịt', '', NULL, 'images/goicuon.jpg', '2025-04-23 12:21:33');
 
 -- --------------------------------------------------------
 
@@ -794,7 +808,9 @@ CREATE TABLE `special_menus` (
 
 INSERT INTO `special_menus` (`id`, `restaurant_id`, `name`, `image_url`, `description`, `created_at`) VALUES
 (1, 1, 'Tôm hùm hấp', 'images/tomhum.jpg', 'Tôm hùm hấp tươi ngon, đậm vị biển.', '2025-04-09 17:01:57'),
-(2, 1, 'Sò điệp nướng mỡ hành', 'images/sonuong.jpg', 'Sò điệp béo ngậy nướng cùng mỡ hành thơm lừng.', '2025-04-09 17:01:57');
+(2, 1, 'Sò điệp nướng mỡ hành', 'images/sonuong.jpg', 'Sò điệp béo ngậy nướng cùng mỡ hành thơm lừng.', '2025-04-09 17:01:57'),
+(3, 100, 'Tôm hùm hấp', 'images/tomhum.jpg', 'Tôm hùm hấp tươi ngon, đậm vị biển.', '2025-04-23 12:23:41'),
+(4, 100, 'Sò điệp nướng mỡ hành', 'images/sonuong.jpg', 'Sò điệp béo ngậy nướng cùng mỡ hành thơm lừng', '2025-04-23 12:23:51');
 
 -- --------------------------------------------------------
 
@@ -901,7 +917,10 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `restaurant_id`, `video_url`, `description`, `created_at`) VALUES
-(1, 1, 'videos/the-gioi-hai-san.mp4', 'Khám phá không gian và món ăn nổi bật tại nhà hàng.', '2025-04-09 17:01:57');
+(1, 1, 'https://www.youtube.com/watch?v=RGs_R4JWrw4', 'Khi giới thiệu về những đặc sản của người Việt, hầu hết mỗi chúng ta đều tự hào khi nhắc về phở, hương vị ẩm thực tinh túy mà chắc chắn phải thử qua một lần trong đời.\nQuán phở 29 nằm trên đường Đoàn Văn Bơ, Q.4, Tp.HCM được nấu từ bí quyết gia truyền gần 70 năm qua. Tuy có nguồn gốc từ phở Hà Nội nhưng để chiều lòng khẩu vị của người miền Nam, anh Trần Tứ Thảo - chủ quán đã nghiên cứu nêm nếm thêm gia vị nước dùng cho phù hợp, mang hương vị nồng đượm, đậm đà, thơm ngậy từ xương hầm.', '2025-04-09 17:01:57'),
+(2, 100, 'https://www.youtube.com/watch?v=LJ_3BeqH63w', NULL, '2025-04-23 12:23:01'),
+(3, 99, 'https://www.youtube.com/watch?v=c4zq9SjHEJk', 'Quán 1: Chè Chợ Bà Chiểu\r\n🌍Địa chỉ: 4 Võ Trường Toản, Phuòng 2, Bình Thạnh\r\n💰Giá Từ: 12K - 15K / ly\r\n🧭Mở bán: 15h - 22h\r\n⛳ Maps : https://maps.app.goo.gl/tHWEfHT8tyNTg...\r\n--------------------------✨✨\r\nQuán 2: Chè Bá Cháy\r\n🌍Địa chỉ: 180/46 Lô D Cư Xá Bình Tiên, Phạm Phú Thứ, Phường 1, Quận 6\r\n💰Giá Từ: 10K / 15K / 20K ( Tuỳ món )\r\n🧭Mở bán: 6h - 23h\r\n📲 SĐT Chị Quyền: 0903079774\r\n⛳ Maps :\r\n--------------------------✨✨\r\nQuán 3: Chè Cô Chín\r\n🌍Địa chỉ: Số 53, Hẻm 702 Đ. Hồng Bàng, Phường 1, Quận 11\r\n💰Giá Từ: 18K - 22K / phần\r\n🧭Mở bán: 15h - 23h\r\n⛳ Maps : https://maps.app.goo.gl/9mgxC2QDSwwMi...', '2025-04-23 12:29:42'),
+(4, 98, 'https://www.youtube.com/watch?v=u3FHNbcn2GI', 'BÁNH XÈO \r\nNGUYÊN LIỆU\r\nBột Bánh:\r\n1 gói bột bánh xèo Hương Xưa (500g)\r\n2 muỗng canh bột chiên xù (20g) hoặc bột chiên giòn\r\n¼ thìa café muối (1g)\r\n1 cái trứng gà (75g)\r\n1 chén nước cốt dừa (250ml)\r\n850ml nước (phân nửa nước và phân nửa đá lạnh)\r\n3 muỗng canh hành lá (20g)\r\nNước Mắm:\r\n1 chén nước hoặc nước hấp thịt (250g)\r\n2,5 muỗng canh đường (50g)\r\n2,5 muỗng canh nước mắm (40g)\r\n1 muỗng nước chanh (12g)\r\n1/3 muỗng cafe muối (2g)\r\n1 muỗng canh tỏi ớt (15g)\r\nNhân Bánh:\r\n500g thịt ba chỉ hoặc thịt nạc vai\r\n500g tôm bạc hoặc tôm đất\r\n500g củ sắn\r\n500g giá sống\r\n2 củ hành tây', '2025-04-23 12:32:47');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -1158,7 +1177,7 @@ ALTER TABLE `danhgia`
 -- AUTO_INCREMENT cho bảng `diadiem_anuong`
 --
 ALTER TABLE `diadiem_anuong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `lichsuhoatdong`
@@ -1200,7 +1219,7 @@ ALTER TABLE `noidung_monan`
 -- AUTO_INCREMENT cho bảng `offers`
 --
 ALTER TABLE `offers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `reset_password`
@@ -1212,13 +1231,13 @@ ALTER TABLE `reset_password`
 -- AUTO_INCREMENT cho bảng `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT cho bảng `special_menus`
 --
 ALTER TABLE `special_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `tag`
@@ -1248,7 +1267,7 @@ ALTER TABLE `thongke`
 -- AUTO_INCREMENT cho bảng `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
