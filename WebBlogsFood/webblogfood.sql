@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 16, 2025 lúc 03:57 PM
+-- Thời gian đã tạo: Th4 23, 2025 lúc 04:58 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -34,6 +34,13 @@ CREATE TABLE `account_activation` (
   `thoi_gian_het_han` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `account_activation`
+--
+
+INSERT INTO `account_activation` (`id`, `nguoidung_id`, `token`, `thoi_gian_het_han`) VALUES
+(11, 105, '8de36f153e5f662ec88a0704d438680c', '2025-04-17 06:08:13');
+
 -- --------------------------------------------------------
 
 --
@@ -60,10 +67,10 @@ CREATE TABLE `baiviet` (
 --
 
 INSERT INTO `baiviet` (`id`, `tieude`, `noidung`, `tacgia_id`, `ngay_dang`, `anh_minh_hoa`, `danh_muc`, `thoi_gian_chuan_bi`, `thoi_gian_nau`, `so_khau_phan`, `muc_do_kho`, `thong_tin_dinh_duong`) VALUES
-(1, 'Cách làm bánh mì', 'Hướng dẫn chi tiết cách làm bánh mì ngon tại nhà...', 65, '2025-03-25', 'images/banhmi.jpg', 'Món Việt', NULL, NULL, NULL, NULL, NULL),
-(2, 'Món chay ngon', 'Công thức chế biến món chay hấp dẫn...', 2, '2025-03-26', 'images/monchay.jpg', 'Món Âu', NULL, NULL, NULL, NULL, NULL),
-(3, 'Bí quyết làm phở bò', 'Bí quyết để có tô phở bò thơm ngon...', 13, '2025-03-24', 'images/pho.jpg', 'Món chay', NULL, NULL, NULL, NULL, NULL),
-(4, 'Công thức làm bánh mì tại nhà', 'Hướng dẫn từng bước để làm bánh mì thơm ngon...', 66, '2025-03-25', 'images/banhmi.jpg', 'Món nướng', NULL, NULL, NULL, NULL, NULL),
+(1, 'Phở 24 ', 'Hướng dẫn chi tiết cách làm bánh mì ngon tại nhà...', 65, '2025-03-25', 'images/pho.jpg', 'Món Việt', NULL, NULL, NULL, NULL, NULL),
+(2, 'Bún Chả Hàng Mành', 'Công thức chế biến món chay hấp dẫn...', 2, '2025-03-26', 'images/buncha.jpg', 'Món Âu', NULL, NULL, NULL, NULL, NULL),
+(3, 'Cơm Tấm Ba Ghiền', 'Bí quyết để có tô phở bò thơm ngon...', 13, '2025-03-24', 'images/comtam.jpg', 'Món chay', NULL, NULL, NULL, NULL, NULL),
+(4, 'Lẩu Thái 123', 'Hướng dẫn từng bước để làm bánh mì thơm ngon...', 66, '2025-03-25', 'images/lauthai.jpg', 'Món nướng', NULL, NULL, NULL, NULL, NULL),
 (5, 'Món chay giàu dinh dưỡng', 'Hướng dẫn chế biến các món chay tốt cho sức khỏe...', 15, '2025-03-26', 'images/monchay.jpg', 'Món tráng miệng', NULL, NULL, NULL, NULL, NULL),
 (6, 'Bí quyết làm phở bò thơm ngon', 'Bí quyết nấu phở bò chuẩn vị truyền thống...', 3, '2025-03-27', 'images/pho.jpg', 'Món hải sản', NULL, NULL, NULL, NULL, NULL),
 (7, 'Cách làm pizza tại nhà', 'Công thức làm pizza đơn giản và ngon như ngoài tiệm...', 1, '2025-03-28', 'images/pizza.jpg', 'Món ăn sáng', NULL, NULL, NULL, NULL, NULL),
@@ -209,7 +216,11 @@ INSERT INTO `binhluan` (`id`, `noidung`, `baiviet_id`, `nguoidung_id`, `thoi_gia
 (4, 'Ngon', 93, 103, '2025-04-13'),
 (5, 'Ngon', 91, 103, '2025-04-13'),
 (6, 'hay quá !!!', 86, 102, '2025-04-16'),
-(7, 'Cảm ơn đã chia sẻ công thức', 86, 102, '2025-04-16');
+(7, 'Cảm ơn đã chia sẻ công thức', 86, 102, '2025-04-16'),
+(8, 'Xin chào', 85, 103, '2025-04-17'),
+(9, 'xin chào', 84, 103, '2025-04-17'),
+(10, 'Cảm ơn bạn đã chia sẻ công thức', 84, 102, '2025-04-17'),
+(11, 'Bánh mì ngon quá', 86, 103, '2025-04-17');
 
 -- --------------------------------------------------------
 
@@ -419,7 +430,37 @@ INSERT INTO `danhgia` (`id`, `baiviet_id`, `nguoidung_id`, `diem`, `thoi_gian`) 
 (9, 85, 103, 5, '2025-04-13'),
 (10, 91, 103, 3, '2025-04-13'),
 (11, 86, 102, 5, '2025-04-16'),
-(12, 84, 102, 5, '2025-04-16');
+(12, 84, 102, 5, '2025-04-16'),
+(13, 84, 103, 5, '2025-04-17'),
+(14, 86, 103, 4, '2025-04-17');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `diadiem_anuong`
+--
+
+CREATE TABLE `diadiem_anuong` (
+  `id` int(11) NOT NULL,
+  `ten` varchar(255) NOT NULL,
+  `dia_chi` text NOT NULL,
+  `loai_hinh` varchar(100) DEFAULT NULL,
+  `khoang_gia` varchar(100) DEFAULT NULL,
+  `mo_ta` text DEFAULT NULL,
+  `hinh_anh` varchar(255) DEFAULT NULL,
+  `ngay_them` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `diadiem_anuong`
+--
+
+INSERT INTO `diadiem_anuong` (`id`, `ten`, `dia_chi`, `loai_hinh`, `khoang_gia`, `mo_ta`, `hinh_anh`, `ngay_them`) VALUES
+(1, 'Phở 24', '123 Đinh Tiên Hoàng, Quận 1, TP.HCM', 'Quán phở', '50.000 - 100.000 VNĐ', 'Phở 24 là địa điểm nổi tiếng với món phở bò truyền thống, nước dùng đậm đà.', 'images/pho.jpg', '2025-04-23 01:39:31'),
+(2, 'Bún Chả Hàng Mành', '19 Hàng Mành, Hoàn Kiếm, Hà Nội', 'Quán bún chả', '40.000 - 80.000 VNĐ', 'Bún chả Hàng Mành nổi tiếng với hương vị đậm đà, thịt nướng thơm ngon.', 'images/buncha.jpg', '2025-04-23 01:39:31'),
+(3, 'Cơm Tấm Ba Ghiền', '84 Đặng Văn Ngữ, Quận Phú Nhuận, TP.HCM', 'Quán cơm tấm', '50.000 - 120.000 VNĐ', 'Cơm tấm Ba Ghiền là địa chỉ yêu thích với cơm tấm sườn bì chả.', 'images/comtam.jpg', '2025-04-23 01:39:31'),
+(4, 'Lẩu Thái 123', '56 Nguyễn Huệ, TP. Đà Nẵng', 'Quán lẩu', '150.000 - 300.000 VNĐ', 'Lẩu Thái 123 mang đến trải nghiệm ẩm thực chua cay đặc trưng.', 'images/lauthai.jpg', '2025-04-23 01:39:31'),
+(5, 'Bánh Xèo Mười Xiềm', '190 Nam Kỳ Khởi Nghĩa, Quận 3, TP.HCM', 'Quán bánh xèo', '60.000 - 150.000 VNĐ', 'Bánh xèo giòn rụm với nhân tôm thịt đậm đà, cùng với rau sống tươi ngon.', 'images/banhxeo.jpg', '2025-04-23 01:39:31');
 
 -- --------------------------------------------------------
 
@@ -555,7 +596,9 @@ INSERT INTO `nguoidung` (`id`, `ten`, `email`, `matkhau`, `avatar`, `vai_tro`, `
 (98, 'Hoàng Văn E', 'hoangvane5@example.com', 'password123', 'avatar5.jpg', 'author', '2025-01-05', 0),
 (102, 'khoa', '99.dangkhoa.10@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', 'images/avatar1.jpg', 'user', '2025-04-09', 1),
 (103, 'user1', 'khoa2005dk@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', 'images/avatar2.jpg', 'user', '2025-04-09', 1),
-(104, 'Admin', 'admin@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', NULL, 'admin', '2025-04-09', 1);
+(104, 'Admin', 'admin@gmail.com', '$2y$10$FE2nGAMsKvnHOuojQvD7D.2Y/LCLMMF6F4zXI5cJfFmIZ/5tN4Jtm', NULL, 'admin', '2025-04-09', 1),
+(105, 'Ngôn', 'tuthanhngon.012345@gmail.com', '$2y$10$qX7BVVltzeNYd9knoIIJBuWFpP3RpeI.d.uUGxUqY0kwxSulVUnh2', NULL, 'user', '2025-04-17', 0),
+(106, 'AnhKhoa', 'ackhoa9@gmail.com', '$2y$10$II0cCQWWLKsj962vXeKkwOmoNPXQOZl0TGavnJ750XwxG5D8qQw/u', NULL, 'user', '2025-04-17', 1);
 
 -- --------------------------------------------------------
 
@@ -828,7 +871,10 @@ INSERT INTO `thich` (`id`, `baiviet_id`, `nguoidung_id`) VALUES
 (9, 85, 102),
 (10, 85, 103),
 (11, 93, 103),
-(12, 90, 103);
+(12, 90, 103),
+(13, 84, 103),
+(14, 84, 102),
+(15, 86, 103);
 
 -- --------------------------------------------------------
 
@@ -946,6 +992,12 @@ ALTER TABLE `danhgia`
   ADD KEY `nguoidung_id` (`nguoidung_id`);
 
 --
+-- Chỉ mục cho bảng `diadiem_anuong`
+--
+ALTER TABLE `diadiem_anuong`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `lichsuhoatdong`
 --
 ALTER TABLE `lichsuhoatdong`
@@ -1054,7 +1106,7 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT cho bảng `account_activation`
 --
 ALTER TABLE `account_activation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `baiviet`
@@ -1084,7 +1136,7 @@ ALTER TABLE `baiviet_theloai`
 -- AUTO_INCREMENT cho bảng `binhluan`
 --
 ALTER TABLE `binhluan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `cac_buoc_lam`
@@ -1108,7 +1160,13 @@ ALTER TABLE `congthuc_nguyenlieu`
 -- AUTO_INCREMENT cho bảng `danhgia`
 --
 ALTER TABLE `danhgia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT cho bảng `diadiem_anuong`
+--
+ALTER TABLE `diadiem_anuong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `lichsuhoatdong`
@@ -1132,7 +1190,7 @@ ALTER TABLE `monan`
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT cho bảng `nguyenlieu`
@@ -1186,7 +1244,7 @@ ALTER TABLE `theloai`
 -- AUTO_INCREMENT cho bảng `thich`
 --
 ALTER TABLE `thich`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `thongke`

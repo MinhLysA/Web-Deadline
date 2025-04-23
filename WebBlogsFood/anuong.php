@@ -1,7 +1,7 @@
 <!-- filepath: c:\xampp\htdocs\WebBlogsFood\templates\anuong.php -->
 <?php
 $title = "Trang Ăn Uống";
-require_once '../WebBlogsFood/config/database.php'; // Kết nối cơ sở dữ liệu
+require_once 'config/database.php'; // Kết nối cơ sở dữ liệu
 include 'includes/header.php'; // Header
 ?>
 
@@ -12,7 +12,7 @@ include 'includes/header.php'; // Header
         <div class="foodie-label-title">Danh sách món ăn</div>
         <div class="foodie-card-grid">
           <?php
-          $limit = 8; // Số món ăn hiển thị trên mỗi trang
+          $limit = 4; // Số món ăn hiển thị trên mỗi trang
           $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
           $offset = ($page - 1) * $limit;
 
@@ -31,7 +31,7 @@ include 'includes/header.php'; // Header
                 <img src='{$baiviet['anh_minh_hoa']}' alt='{$baiviet['tieude']}' />
                 <small>{$baiviet['tieude']}</small>
                 <p>{$baiviet['noidung']}</p>
-                <button onclick=\"location.href='../Lv3/anuong_v2.html?id={$baiviet['id']}'\">Xem thêm</button>
+                <button onclick=\"location.href='an_uongV2.php?id={$baiviet['id']}'\">Xem thêm</button>
               </div>
               ";
           }
@@ -60,7 +60,7 @@ include 'includes/header.php'; // Header
               <img src='{$item['anh_minh_hoa']}' alt='{$item['tieude']}' />
               <h3>{$item['tieude']}</h3>
               <p>" . substr($item['noidung'], 0, 100) . "...</p>
-              <a href='../Lv3/anuong_v2.html?id={$item['id']}' class='foodie-view-btn'>Xem thêm</a>
+              <a href='an_uongV2.php?id={$item['id']}' class='foodie-view-btn'>Xem thêm</a>
             </div>
             ";
         }

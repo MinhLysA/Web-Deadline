@@ -9,7 +9,7 @@ $sql_articles = "
     FROM baiviet b 
     LEFT JOIN thongke t ON b.id = t.baiviet_id 
     ORDER BY t.luot_xem DESC 
-    LIMIT 10
+    LIMIT 6
 ";
 $stmt_articles = $conn->prepare($sql_articles);
 $stmt_articles->execute();
@@ -21,7 +21,7 @@ $sql_popular = "
     FROM baiviet b 
     LEFT JOIN thongke t ON b.id = t.baiviet_id 
     ORDER BY t.luot_xem DESC 
-    LIMIT 8
+    LIMIT 10
 ";
 $stmt_popular = $conn->prepare($sql_popular);
 $stmt_popular->execute();
@@ -65,7 +65,7 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
             <div class="popular-item">
                 <img src="<?php echo $article['anh_minh_hoa']; ?>" alt="Popular" />
                 <p>
-                    <a href="CongThucV2.php?id=<?php echo $article['id']; ?>">
+                    <a href="an_uongV2.php?id=<?php echo $article['id']; ?>">
                         <?php echo htmlspecialchars($article['tieude']); ?>
                     </a>
                 </p>
@@ -93,23 +93,36 @@ $user_name = ($logged_in && isset($_SESSION['user_name'])) ? $_SESSION['user_nam
         </div>
         <?php endforeach; ?>
         <div class="content-primary1">
-            <div class="section-header1">
-                <h2>Địa Điểm Ăn Uống</h2>
-                <a href="#">Xem thêm ➝</a>
+    <div class="section-header1">
+        <h2>Địa Điểm Ăn Uống</h2>
+        <a href="anuong.php">Xem thêm ➝</a>
+    </div>
+    <?php
+    // Lấy dữ liệu địa điểm ăn uống từ bảng diadiem_anuong
+    $sql_locations = "
+        SELECT id, ten, mo_ta, ngay_them, hinh_anh 
+        FROM diadiem_anuong 
+        ORDER BY ngay_them DESC 
+        LIMIT 4
+    ";
+    $stmt_locations = $conn->prepare($sql_locations);
+    $stmt_locations->execute();
+    $locations = $stmt_locations->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($locations as $location): ?>
+        <div class="article-card1">
+            <img src="<?php echo htmlspecialchars($location['hinh_anh']); ?>" alt="<?php echo htmlspecialchars($location['ten']); ?>" />
+            <div class="article-card-content1">
+                <h3><?php echo htmlspecialchars($location['ten']); ?></h3>
+                <p class="article-date1">
+                    📅 <?php echo date("d/m/Y", strtotime($location['ngay_them'])); ?>
+                </p>
+                <p><?php echo htmlspecialchars(substr($location['mo_ta'], 0, 100)) . '...'; ?></p>
+                <a href="an_uongV2.php?id=<?php echo $location['id']; ?>" class="btn-view">Xem chi tiết</a>
             </div>
-                <?php foreach ($articles as $article): ?>
-                <div class="article-card1">
-                    <img src="<?php echo $article['anh_minh_hoa']; ?>" alt="<?php echo htmlspecialchars($article['tieude']); ?>" />
-                    <div class="article-card-content1">
-                        <h3><?php echo htmlspecialchars($article['tieude']); ?></h3>
-                        <p class="article-date1">
-                            📅 <?php echo date("d/m/Y", strtotime($article['ngay_dang'])); ?>
-                        </p>
-                        <p><?php echo htmlspecialchars(substr($article['noidung'], 0, 100)) . '...'; ?></p>
-                    </div>
-                </div>
-                <?php endforeach; ?>
         </div>
+    <?php endforeach; ?>
+</div>
 
     </div>
     <div class="content-sidebar">
